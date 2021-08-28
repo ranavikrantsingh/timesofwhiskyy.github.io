@@ -1,9 +1,49 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
+	<head><link rel='shortcut icon' type='image/x-icon' href='images/Add a heading.png' />
+
+
+		<style>
+			#background-video {
+  width: 100vw;
+  height: 100vh;
+  -webkit-transform: scaleY(1.5); 
+  -moz-transform: scaleY(1.5);
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+		</style>
 		<title>Rana's Portfolio</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" /> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
@@ -19,7 +59,10 @@
 						</div>
 						<div class="content">
 							<div class="inner">
-								<h1>Rana Vikrant Singh Rathod</h1>
+								<div class="typewriter">
+									<h1>Rana Vikrant Singh Rathod</h1>
+
+								</div>
 								<p>A React Native Developer  <br />
 								Skilled in HTML,CSS,Core JAVA, SQL and JavaScript </p>
 							</div>
@@ -145,9 +188,14 @@
 			</div>
 
 		<!-- BG -->
-			<div id="bg"> 
+			<!-- <div id="bg"> 
 				
-			</div>
+			</div> -->
+			
+				<video autoplay loop id="background-video" >
+					<source src ='images/background.mp4' type='video/mp4'/>
+				</video>
+		
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
