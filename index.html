@@ -6,6 +6,17 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			video { 
+				overflow: hidden;
+			  width: 100%;
+			  z-index: -1;
+			  object-fit: cover;
+			  
+			  -webkit-transform: scaleY(2); 
+			  -moz-transform: scaleY(2);
+			}
+			</style>
 	</head>
 	<body class="is-preload">
 
@@ -145,7 +156,14 @@
 			</div>
 
 		<!-- BG -->
-			<div id="bg"></div>
+			<div id="bg"> 
+				<span>
+					<Video autoplay loop='true' >
+						<source style="height: fit-content;width: max-content;" src='images/background.mp4' type="video/mp4"/>
+					</Video>
+				</span>
+				
+			</div>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
